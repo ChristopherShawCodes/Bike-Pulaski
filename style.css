@@ -14,7 +14,7 @@ body {
     font-family: 'Lato', sans-serif;
     position: relative;
     height: 100%;
-    -ms-overflow-style: none;  /* IE and Edge */
+    -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
@@ -140,6 +140,10 @@ body::-webkit-scrollbar{
     height: 100vh;
 }
 
+.learn-wrapper{
+    height: 100vh;
+}
+
 .gallery-wrapper{
     height: 100vh;
     text-align: center;
@@ -156,12 +160,11 @@ body::-webkit-scrollbar{
 
 
 footer{
+    position: absolute;
     background-color: var(--dark);
     height: 5rem;
     color: var(--orange);
-    position: absolute;
     width: 100%;
-    bottom: 0;
     cursor: default;
 }
 
