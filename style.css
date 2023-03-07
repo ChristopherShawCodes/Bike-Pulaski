@@ -118,11 +118,22 @@ body::-webkit-scrollbar{
 .light-bg p{
     text-align: center;
     padding-top: 10px;
+    cursor: default;
 }
 
 .light-bg a{
     text-decoration: none;
     color: var(--orange);
+}
+
+.here:hover{
+    scale: 1.1;
+}
+
+.contact-logo{
+    display: flex;
+    justify-content: center;
+    background-color: var(--dark);
 }
 
 .light-bg img{
@@ -138,9 +149,10 @@ footer{
     height: 5rem;
     margin-top: 50px;
     color: var(--orange);
-    /* position: absolute; */
+    position: absolute;
     width: 100%;
     bottom: 0;
+    cursor: default;
 }
 
 footer p{
