@@ -1,5 +1,10 @@
 /* Learn More  */
 
+:root{
+  --orange: #FE9E5E;
+  --dark: #12212F;
+}
+
 .learn-wrapper{
   padding-top: 4rem;
   height: 120vh;
@@ -7,6 +12,11 @@
   
   p {
     line-height: 1.5;
+  }
+
+  .learn-link{
+    text-decoration: none;
+    color: #fff;
   }
   
   .pack-section{
@@ -93,20 +103,19 @@
     font-weight: 400;
     color: #fff;
     font-size: 42px;
-    margin: 150px 0 0;
+    margin: 120px 0 0;
+    padding-bottom: 20px;
     line-height: 1;
+    cursor: default;
   }
-  .pack-info p{
-    font-family: sans-serif;
-    color: #fff;
-  }
+ 
   .pack-info button{
     cursor: pointer;
     width: 100px;
     height: 35px;
     color: #fff;
     font-size: 16px;
-    background: green;
+    background: var(--orange);
     border: none;
     border-radius: 13px;
     box-shadow: 0 2px 3px #000;
@@ -114,7 +123,8 @@
     
   }
   .pack-info button:hover{
-    background: #ff5349;
+    background: var(--dark);
+    color: var(--orange);
     font-size: 20px;
      box-shadow: 0 2px 3px #000;
     width: 120px;
