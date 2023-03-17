@@ -7,12 +7,9 @@
 
 .learn-wrapper{
   padding-top: 4rem;
-  height: 120vh;
+  height: 100%;
 }
   
-  p {
-    line-height: 1.5;
-  }
 
   .learn-link{
     text-decoration: none;
