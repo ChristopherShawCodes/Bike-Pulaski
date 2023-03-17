@@ -54,7 +54,7 @@
   
   .card h1 {
     position: relative;
-    padding: 190px 0px 100px 10px;
+    padding: 200px 0px 100px 10px;
     width: 90%;
   }
   
@@ -100,16 +100,16 @@
   
   .open-content img {
     position: relative;
-    width: 90%;
+    width: 60%;
     margin-left: 3%;
-    margin-top: 20px;
+    margin-top: -150px;
     z-index: 5;
   }
   
   .open-content .text {
     background: #fff;
-    margin-top: -56%;
-    padding: 60% 5% 5% 5%;
+    margin-top: -46%;
+    padding: 50% 5% 5% 5%;
     width: 80%;
     margin-left: 5%;
     margin-bottom: 5%;
@@ -125,9 +125,13 @@
     display: block;
     position: absolute;
     right: 12px;
-    top: 12px;
+    top: -150px;
     width: 30px;
     height: 30px;
+  }
+
+  .close-content:hover{
+    scale: 1.1;
   }
   
   .close-content span {
@@ -217,7 +221,7 @@
     }
     
     .open-content img {
-      margin-top: 40px;
+      margin-top: 10px;
     }
   }
 
