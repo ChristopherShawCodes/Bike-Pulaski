@@ -2,229 +2,143 @@
 
 .learn-wrapper{
   padding-top: 4rem;
+  height: 120vh;
 }
   
   p {
     line-height: 1.5;
   }
   
-  .container {
-    max-width: 800px;
+  .pack-section{
+    max-width: 960px;
     margin: 0 auto;
+    padding: 6% 2%;
   }
-  
-  /* Cards */
-  .card-column {
-    width: 50%;
-    float: left;
-    padding: 4%;
-    box-sizing: border-box;
+  .pack-grig{
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    
   }
-  
-  .column-1 {
-    padding-top: 100px;
+  .pack-grig:after{
+    clear: both;
   }
-  
-  .card {
-    width: 92%;
-    max-width: 340px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    background: #C9DBD2;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 60px;
+  .pack-grig:after,xop-box:before{
+    content: '';
+    display: table;
   }
-
-  .card:hover{
-    scale: 1.05;
+  .pack-grig li{
+    width: 320px;
+    height: 328px;
+    display: inline-block;
+    margin: 20px;
   }
-  
-  .border {
-    position: absolute;
+  .pack-box{
     width: 100%;
     height: 100%;
-    padding: 6px;
-    border: 1px solid #fff;
-    opacity: 0.5;
-    left: -6px;
-    top: -6px;
-  }
-  
-  .card h1 {
     position: relative;
-    padding: 200px 0px 100px 10px;
-    width: 90%;
+    box-shadow: 4px 2px 6px #000;
+    border-radius: 10px;
+    -webkit-transition: 0.3s ease-in-out;
+    -webkit-transform: 0.3s ease-in-out;
+     -moz-transition: 0.3s ease-in-out;
+    -moz-transform: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    transform: 0.3s ease-in-out;
   }
-  
-  .card > img {
-    width: 90%;
-    position: absolute;
-    top: -6%;
-    left: -6%;
+  .pack-box:hover{
+    transform: scale(1.05);
+    box-shadow: 6px 3px 10px #000;
   }
-  
-  .card-color-0 {
-    background-color: #FD9D5E;
-  }
-  
-  .card-color-1 {
-    background-color: #f9c961;
-  }
-  
-  .card-color-2 {
-    background-color: #8DAA91;
-  }
-  
-  .card-color-3 {
-    background-color: #888DA7;
-  }
-  
-  /* The cover (expanding background) */
-  .cover {
-    position: fixed;
-    background: #EB5160;
-    z-index: 100;
-    transform-origin: 50% 50%;
-  }
-  
-  /* The open page content */
-  .open-content {
-    width: 100%;
-    z-index: 110;
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .open-content img {
-    position: relative;
-    width: 60%;
-    margin-left: 3%;
-    margin-top: -150px;
-    z-index: 5;
-  }
-  
-  .open-content .text {
-    background: #fff;
-    margin-top: -46%;
-    padding: 50% 5% 5% 5%;
-    width: 80%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-  }
-  
-  .open-content .text h1, .open-content .text p {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .close-content {
-    display: block;
-    position: absolute;
-    right: 12px;
-    top: -150px;
-    width: 30px;
-    height: 30px;
-  }
+  .pack-img-1{
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.10)),
+    url(/Images/map.png);
+    background-size: cover;
+    opacity: 0.8;
 
-  .close-content:hover{
-    scale: 1.1;
   }
   
-  .close-content span {
-    background: #222;
-    width: 30px;
-    height: 6px;
-    display: block;
-    position: absolute;
-    top: 14px;
-  }
-  
-  .x-1 {
-    transform: rotate(45deg);
-  }
-  
-  .x-2 {
-    transform: rotate(-45deg);
-  }
-  
-  /* 
-  ** Transitions
-  */
-  
-  .card {
-    transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
-  }
-  
-  .border {
-    transition: opacity 200ms linear, transform 200ms ease-out;
-  }
-  
-  .card img {
-    transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
-  }
-  
-  .card h1 {
-    transform: translate3d(20%, 0px, 0px);  
-    transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
-  }
-  
-  /* Clicked card */
-  .card.clicked img {
-    transform: translate3d(0px, -40px, 0px);
-    opacity: 0;
-  }
-  
-  .card.clicked .border {
-    opacity: 0;
-    transform: scale(1.3);
-  }
-  
-  .card.out, .card.out img {
-    transform: translate3d(0px, -40px, 0px);
-    opacity: 0;
-  }
-  
-  .card.out h1, .card.clicked h1 {
-    transform: translate3d(20%, -40px, 0px);
-    opacity: 0;
-  }
-  
-  .cover {
-    transition: transform 300ms ease-in-out;
-  }
-  
-  .open-content {
-    transition: opacity 200ms linear 0ms;
-  }
-  
-  .open-content.open {
-    opacity: 1;
-    pointer-events: all;
-    transition-delay: 1000ms;
-  }
-  
-  /* 
-  ** Media Queries
-  */
-  
-  @media screen and (max-width: 600px) {
-    .card-column {
-      width: 90%;
-    }
-    
-    .column-1 {
-      padding-top: 0px;
-    }
-    
-    .open-content img {
-      margin-top: 10px;
-    }
-  }
+  .pack-img-2{
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.10)),
+    url(https://images.unsplash.com/photo-1626736608558-174e8dfa2aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80);
+    background-size: cover;
+    opacity: 0.8;
 
-  .learn-wrapper{
-    height: 160vh;
-}
+  }
+  .pack-img-3{
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.10)),
+    url(https://images.unsplash.com/photo-1594058573823-d8edf1ad3380?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGhlYWx0aHl8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    opacity: 0.8;
+
+  }
+  
+  .pack-img-4{
+    background:linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.10)),
+    url(https://images.unsplash.com/photo-1517554558809-9b4971b38f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZmFtaWx5JTIwb3V0ZG9vcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60);
+    background-size: cover;
+    opacity: 0.8;
+  }
+  
+  .pack-info{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+  }
+  .pack-info h3{
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 42px;
+    margin: 150px 0 0;
+    line-height: 1;
+  }
+  .pack-info p{
+    font-family: sans-serif;
+    color: #fff;
+  }
+  .pack-info button{
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+    background: green;
+    border: none;
+    border-radius: 13px;
+    box-shadow: 0 2px 3px #000;
+    outline: none;
+    
+  }
+  .pack-info button:hover{
+    background: #ff5349;
+    font-size: 20px;
+     box-shadow: 0 2px 3px #000;
+    width: 120px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
